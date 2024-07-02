@@ -1,0 +1,20 @@
+1 name:GitHub Actions D
+emo
+2 run-name:${{ github.actor }} is testing out GitHub Actions 🚀
+3 on:[push]
+4 jobs:
+5 Explore-GitHub-
+Actions:
+6 runs-on:ubuntu-latest
+7 steps:
+8 -run:echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+9 -run:echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+10 -run:echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}
+11 -name:Check out repository code
+12 uses:actions/checkout@v3
+13 -run:echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+14 -run:echo "🖥️ The workflow is now ready to test your code on the runner."
+15 -name:List files in the repository
+16 run:|
+17 ls ${{ github.workspace }}
+18 -run:echo "🍏 This job's status is ${{ job.status }}."
